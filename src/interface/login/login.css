@@ -1,0 +1,91 @@
+.main-content {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #018270;
+  color: #fff;
+  font-size: 4rem;
+  width: 70%;
+  height: 100%;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  width: 30%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.signin-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.signin-welcome h2 {
+  font-size: 1.8rem;
+}
+
+.signin-welcome h3 {
+  font-size: 1.5rem;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: .5rem;
+}
+
+.form-section label {
+  text-transform: capitalize;
+}
+
+.form-section input {
+  padding: .5rem;
+  border-radius: 3px;
+  border: 1px solid #018270;
+}
+
+.error {
+  font-size: smaller;
+  color: tomato;
+  margin: -5px 0;
+}
+
+.form-section button {
+  background: #018270;
+  color: #fff;
+  margin-top: 1rem;
+  padding: .5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-section button:hover {
+  background: #006d5f;
+  transition: all 0.2s ease;
+}
+
+.signin-helper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: .5rem;
+  gap: .3rem;
+}
+
+.signin-helper span a {
+  color: #018270;
+}
