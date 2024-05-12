@@ -17,11 +17,11 @@ const router = createBrowserRouter([
     element: <Dashboard />,
     children: [
       {
-        path: 'register',
-        element: <Register />
-      }
-    ]
-  }
+        path: "register",
+        element: <Register />,
+      },
+    ],
+  },
 ]);
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <>
