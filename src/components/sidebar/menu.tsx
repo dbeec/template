@@ -22,7 +22,7 @@ const data_sidebar: Modulos = {
       icon: <SpaceDashboardIcon />,
       name: "Modulo 1",
       submodulos: [
-        { name: "Submodulo 1.1", url: "" },
+        { name: "Submodulo 1.1", url: "dashboard/register" },
         { name: "Submodulo 1.2", url: "" },
       ],
     },

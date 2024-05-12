@@ -36,7 +36,8 @@ export default function Sidebar() {
                 padding: ".7rem 1rem",
               }}
             >
-              {submodulo.name}
+              <a href={item.url}>{submodulo.name}</a>
+              <a href="dashboard/register">sss</a>
             </AccordionDetails>
           ))}
         </Accordion>

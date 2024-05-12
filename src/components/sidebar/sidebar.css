@@ -1,8 +1,20 @@
 .sidebar-content {
   background: hsla(23, 41%, 9%, 1);
-  background: linear-gradient(90deg, hsla(23, 41%, 9%, 1) 0%, hsla(18, 16%, 53%, 1) 100%);
-  background: -moz-linear-gradient(90deg, hsla(23, 41%, 9%, 1) 0%, hsla(18, 16%, 53%, 1) 100%);
-  background: -webkit-linear-gradient(90deg, hsla(23, 41%, 9%, 1) 0%, hsla(18, 16%, 53%, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    hsla(23, 41%, 9%, 1) 0%,
+    hsla(18, 16%, 53%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(23, 41%, 9%, 1) 0%,
+    hsla(18, 16%, 53%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(23, 41%, 9%, 1) 0%,
+    hsla(18, 16%, 53%, 1) 100%
+  );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#1F140D", endColorstr="#9B8074", GradientType=1 );
   width: 15%;
   height: 100%;
