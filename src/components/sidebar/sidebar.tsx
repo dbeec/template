@@ -3,108 +3,44 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import data_sidebar from "./menu";
 
 export default function Sidebar() {
   return (
     <div className="sidebar-content">
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Panel principal
-        </AccordionSummary>
-        <AccordionDetails>
-          Dashboard
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Admin de usuarios
-        </AccordionSummary>
-        <AccordionDetails sx={{ marginLeft: "1rem" }}>
-          Registro de usuarios
-        </AccordionDetails>
-        <AccordionDetails sx={{ marginLeft: "1rem" }}>
-          Lista de usuarios
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Comercios
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Membresía
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Beneficios
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        square
-        disableGutters
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Beneficiarios
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
-
-      <Accordion
-        disableGutters
-        square
-        sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
-      >
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          Vendedores
-        </AccordionSummary>
-        <AccordionDetails>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          malesuada lacus ex, sit amet blandit leo lobortis eget.
-        </AccordionDetails>
-      </Accordion>
+      {data_sidebar.modulo.map((item, index) => (
+        <Accordion
+          key={index}
+          square
+          disableGutters
+          sx={{ bgcolor: "transparent", color: "#fff", boxShadow: "none" }}
+        >
+          <AccordionSummary
+            sx={{
+              fontWeight: "500",
+              padding: "0",
+            }}
+            expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+          >
+            {item.icon}
+            <span className="span">{item.name}</span>
+          </AccordionSummary>
+          {item.submodulos.map((submodulo, subIndex) => (
+            <AccordionDetails
+              key={subIndex}
+              sx={{
+                bgcolor: "#cca595",
+                color: "#6e513d",
+                fontWeight: "500",
+                borderRadius: "3px",
+                padding: ".7rem 1rem",
+              }}
+            >
+              {submodulo.name}
+            </AccordionDetails>
+          ))}
+        </Accordion>
+      ))}
     </div>
   );
 }

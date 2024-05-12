@@ -34,8 +34,10 @@ export default function Login() {
   return (
     <>
       <div className="main-content">
-        <div className="image-section">{/* <img src="" alt="" /> */}
-        <h1>QuintApp</h1></div>
+        <div className="image-section">
+          {/* <img src="" alt="" /> */}
+          <h1>QuintApp</h1>
+        </div>
 
         <div className="form-section">
           <div className="signin-welcome">
