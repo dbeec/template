@@ -36,6 +36,16 @@ export default function Gridd() {
           </Grid>
         </Grid>
       </Box>
+
+      <Box sx={{ width: "100%" }}>
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            <div className="content">
+              
+            </div>
+          </Grid>
+        </Grid>
+      </Box>
     </>
   );
 }
