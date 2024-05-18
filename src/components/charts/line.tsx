@@ -1,0 +1,28 @@
+import { Chart } from "chart.js";
+
+export default function LineChart() {
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Line Chart'
+        }
+      }
+    },
+  };
+
+  return (
+    <>
+    
+    </>
+  );
+}
+

@@ -7,9 +7,8 @@ import TuneIcon from '@mui/icons-material/Tune';
 // import SettingsIcon from '@mui/icons-material/Settings';
 // import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
-interface Submodulo {
-  name: string;
-  url: string;
+interface Modulos {
+  modulo: Modulo[];
 }
 
 interface Modulo {
@@ -19,9 +18,12 @@ interface Modulo {
   submodulos: Submodulo[];
 }
 
-interface Modulos {
-  modulo: Modulo[];
+interface Submodulo {
+  name: string;
+  url: string;
 }
+
+
 
 const data_sidebar: Modulos = {
   modulo: [
@@ -34,16 +36,18 @@ const data_sidebar: Modulos = {
       icon: <GroupAddIcon />,
       name: "Gestión de usuarios",
       submodulos: [
-        { name: "Submodulo 2.1", url: "" },
+        { name: "Lista de usuarios", url: "" },
         { name: "Submodulo 2.2", url: "" },
       ],
     },
     {
       icon: <ConfirmationNumberIcon />,
-      name: "Gestión de boletos",
+      name: "Gestión de rifas",
       submodulos: [
-        { name: "Submodulo 2.1", url: "" },
-        { name: "Submodulo 2.2", url: "" },
+        { name: "Registro de premios", url: "" },
+        { name: "Creación de boletos", url: "" },
+        { name: "Lista de premios", url: "" },
+        { name: "Lista de boletos", url: "" },
       ],
     },
     {
