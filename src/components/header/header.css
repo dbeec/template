@@ -19,6 +19,17 @@
   font-weight: 600;
 }
 
+.welcome-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.welcome-profile span {
+  font-size: .92rem;
+  font-weight: 500;
+}
+
 .add-items {
   display: flex;
   align-items: center;

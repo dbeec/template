@@ -28,7 +28,7 @@ export default function Login() {
   // send form
   const onSubmit = handleSubmit((data: FormData) => {
     console.log(data);
-    reset();
+    reset(); // <- limpia el formulario
   });
 
   return (

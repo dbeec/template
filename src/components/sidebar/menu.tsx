@@ -30,13 +30,13 @@ const data_sidebar: Modulos = {
     {
       icon: <SpaceDashboardIcon />,
       name: "Panel principal",
-      submodulos: [{ name: "Dashboard", url: "register" }],
+      submodulos: [{ name: "Dashboard", url: "home" }],
     },
     {
       icon: <GroupAddIcon />,
       name: "Gestión de usuarios",
       submodulos: [
-        { name: "Lista de usuarios", url: "" },
+        { name: "Lista de usuarios", url: "userlist" },
         { name: "Submodulo 2.2", url: "" },
       ],
     },

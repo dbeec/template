@@ -1,5 +1,6 @@
+import BreadcrumpSeparator from "../breadcrumps/breadcrumps";
 import "./header.css";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+// import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import AddIcon from "@mui/icons-material/Add";
 
 export default function Header() {
@@ -7,12 +8,16 @@ export default function Header() {
     <>
       <div className="header-content">
         <div className="title-page">
-          <ArrowBackIosIcon />
-          <span>Panel principal</span>
+          {/* <ArrowBackIosIcon />
+          <span>Panel principal</span> */}
+          <BreadcrumpSeparator />
         </div>
 
-        <div className="add-items">
-          <AddIcon />
+        <div className="welcome-profile">
+          <span>Bienvenido/a Daniela!</span>
+          <div className="add-items">
+            <AddIcon />
+          </div>
         </div>
       </div>
     </>

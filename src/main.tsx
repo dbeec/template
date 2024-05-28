@@ -3,8 +3,9 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page";
 import Login from "./interface/login/login";
+import UserList from "./interface/userlist/userlist";
+import MainContent from "./interface/root/root";
 import Dashboard from "./interface/dashboard/dashboard";
-import Register from "./interface/register/register";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +14,15 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "dashboard",
-    element: <Dashboard />,
+    element: <MainContent/>,
     children: [
       {
-        path: "register",
-        element: <Register />,
+        path: "home",
+        element: <Dashboard/>,
+      },
+      {
+        path: "userlist",
+        element: <UserList />,
       },
     ],
   },
