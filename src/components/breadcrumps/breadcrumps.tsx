@@ -1,10 +1,11 @@
 import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
-import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { useNavigate, useLocation } from "react-router-dom";
+import "./breadcrumps.css";
+import { Typography } from "@mui/material";
 
 interface Breadcrumb {
   label: string;
@@ -18,14 +19,26 @@ export default function BreadcrumpSeparator() {
   const [breadcrumbs, setBreadcrumbs] = React.useState<Breadcrumb[]>([]);
 
   React.useEffect(() => {
-    const pathnames = location.pathname.split('/').filter((x) => x);
-    const crumbList = pathnames.map((value, index) => {
-      const url = `/${pathnames.slice(0, index + 1).join('/')}`;
-      return { label: value.charAt(0).toUpperCase() + value.slice(1), url };
-    });
+    const pathnames = location.pathname.split("/").filter((x) => x);
 
-    // Add 'Home' breadcrumb at the start, pointing to '/dashboard'
-    setBreadcrumbs([{ label: "Home", url: "/home" }, ...crumbList]);
+    let crumbList: Breadcrumb[] = [];
+    if (pathnames.length === 0) {
+      crumbList = [{ label: "Home", url: "/home" }];
+    } else if (pathnames.length === 1) {
+      crumbList = [
+        {
+          label: pathnames[0].charAt(0).toUpperCase() + pathnames[0].slice(1),
+          url: location.pathname,
+        },
+      ];
+    } else {
+      crumbList = pathnames.map((value, index) => {
+        const url = `/${pathnames.slice(0, index + 1).join("/")}`;
+        return { label: value.charAt(0).toUpperCase() + value.slice(1), url };
+      });
+    }
+
+    setBreadcrumbs(crumbList);
   }, [location]);
 
   const handleClick = (
@@ -53,12 +66,20 @@ export default function BreadcrumpSeparator() {
               href={crumb.url}
               onClick={(event) => handleClick(event, crumb.url)}
             >
-              {crumb.label}
+              <Typography
+                sx={{
+                  fontFamily: "Urbanist",
+                  fontWeight: "600",
+                  fontSize: ".92rem",
+                }}
+              >
+                {crumb.label}
+              </Typography>
             </Link>
           ) : (
-            <Typography key={index} color="text.primary">
+            <p className="prueba" key={index}>
               {crumb.label}
-            </Typography>
+            </p>
           )
         )}
       </Breadcrumbs>
