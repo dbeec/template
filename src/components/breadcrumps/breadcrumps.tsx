@@ -4,7 +4,6 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { useNavigate, useLocation } from "react-router-dom";
-import "./breadcrumps.css";
 import { Typography } from "@mui/material";
 
 interface Breadcrumb {
@@ -69,17 +68,15 @@ export default function BreadcrumpSeparator() {
               <Typography
                 sx={{
                   fontFamily: "Urbanist",
-                  fontWeight: "600",
-                  fontSize: ".92rem",
+                  fontWeight: "500",
+                  fontSize: "1rem",
                 }}
               >
                 {crumb.label}
               </Typography>
             </Link>
           ) : (
-            <p className="prueba" key={index}>
-              {crumb.label}
-            </p>
+            <p key={index}>{crumb.label}</p>
           )
         )}
       </Breadcrumbs>

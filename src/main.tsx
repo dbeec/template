@@ -6,7 +6,7 @@ import Login from "./interface/login/login";
 import UserList from "./interface/userlist/userlist";
 import MainContent from "./interface/root/root";
 import Dashboard from "./interface/dashboard/dashboard";
-import Update from "./interface/userlist/update";
+import RegisterUser from "./interface/userlist/register";
 
 const router = createBrowserRouter([
   {
@@ -15,21 +15,19 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    element: <MainContent/>,
+    element: <MainContent />,
     children: [
       {
         path: "home",
-        element: <Dashboard/>,
+        element: <Dashboard />,
       },
       {
         path: "userlist",
         element: <UserList />,
-        children: [
-          {
-            path: "update",
-            element: <Update />,
-          }
-        ]
+      },
+      {
+        path: "userlist/register",
+        element: <RegisterUser />,
       },
     ],
   },

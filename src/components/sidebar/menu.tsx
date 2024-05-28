@@ -37,7 +37,7 @@ const data_sidebar: Modulos = {
       name: "Gestión de usuarios",
       submodulos: [
         { name: "Lista de usuarios", url: "userlist" },
-        { name: "Submodulo 2.2", url: "userlist/update" },
+        { name: "Registrar usuarios", url: "userlist/register" },
       ],
     },
     {
