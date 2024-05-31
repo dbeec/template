@@ -1,0 +1,14 @@
+.input-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.register input {
+  padding: 0.5rem;
+  border-radius: 3px;
+}
+
+.register select {
+  padding: 0.5rem;
+  border-radius: 3px;
+}
